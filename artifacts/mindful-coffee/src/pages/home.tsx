@@ -396,7 +396,6 @@ export default function Home() {
           ))}
         </div>
       </nav>
-
       {/* HERO */}
       <section
         id="hero"
@@ -441,7 +440,7 @@ export default function Home() {
             {tx.heroTagline}
           </h1>
           <p
-            className="animate-fade-in-up mb-2"
+            className="animate-fade-in-up mb-2 text-[#5aa35a]"
             style={{
               fontFamily: "var(--app-font-serif)",
               fontSize: "clamp(1.1rem, 3vw, 1.6rem)",
@@ -501,7 +500,6 @@ export default function Home() {
           <img src={imgGif} alt="" className="w-16 opacity-70" />
         </div>
       </section>
-
       {/* PHILOSOPHY */}
       <section id="philosophy" className="section-padding" style={{ maxWidth: "800px", margin: "0 auto" }}>
         <RevealDiv>
@@ -569,7 +567,6 @@ export default function Home() {
           </div>
         </RevealDiv>
       </section>
-
       {/* FULL WIDTH IMAGE BREAK */}
       <div className="relative h-64 md:h-96 overflow-hidden">
         <img
@@ -595,7 +592,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-
       {/* ABOUT */}
       <section id="about" className="section-padding" style={{ maxWidth: "900px", margin: "0 auto" }}>
         <RevealDiv>
@@ -681,7 +677,6 @@ export default function Home() {
           </div>
         </RevealDiv>
       </section>
-
       {/* ACTIVITIES */}
       <section
         id="activities"
@@ -760,7 +755,6 @@ export default function Home() {
           </RevealDiv>
         </div>
       </section>
-
       {/* ARTICLES */}
       <section id="articles" className="section-padding" style={{ maxWidth: "900px", margin: "0 auto" }}>
         <RevealDiv>
@@ -820,7 +814,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
       {/* JOIN / FORM */}
       <section
         id="join"
@@ -966,7 +959,6 @@ export default function Home() {
           )}
         </div>
       </section>
-
       {/* FOOTER */}
       <footer
         className="px-8 py-12"
