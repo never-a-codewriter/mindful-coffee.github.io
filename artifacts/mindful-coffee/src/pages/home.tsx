@@ -36,7 +36,7 @@ const t: Record<Lang, Record<string, string>> = {
     philQ1: "咖啡与正念，相得益彰",
     philP1: "咖啡属于日常，具有国际性；正念风靡世界，已进入教育、医疗、心理学界。正念与咖啡的结合，可以通过人们喜闻乐见的方式，进入家庭与日常生活，为大家提供服务。",
     philQ2: "留白一刻",
-    philP2: "你们提出「留白一刻」，这个定位很好。简单地说，就是体会念头与念头之间的空隙，体会念头背后虚空一般的心。正念咖啡，就是以咖啡为锚点，通过相应的仪式感，在专心制作、品饮的过程中，让心随之静下来。",
+    philP2: "这个理念简单地说，就是体会念头与念头之间的空隙，体会念头背后虚空一般的心。正念咖啡，就是以咖啡为锚点，通过相应的仪式感，在专心制作、品饮的过程中，让心随之静下来。",
     philQ3: "区别，就在于用心",
     philP3: "是以贪嗔痴喝咖啡，还是以正念喝咖啡，区别就在于用心。所有的仪轨和氛围，只是助缘而已。在这个过程中，我们要始终带着专注，觉知自己的动作，也觉知内心的状态，以及空白的这一块。",
     philAuthor: "——济群法师，2024年12月讲于梅花岛",
@@ -547,7 +547,7 @@ export default function Home() {
         <RevealDiv delay={2}>
           <div className="p-8 mb-6" style={{ background: "hsl(38 22% 91%)", borderLeft: "2px solid hsl(148 20% 29% / 0.3)" }}>
             <p className="text-sm leading-loose mb-4" style={{ color: "hsl(0 0% 25%)" }}>{tx.philP3}</p>
-            <p className="text-xs tracking-widest" style={{ color: "hsl(148 20% 35%)", fontStyle: "italic" }}>{tx.philAuthor}</p>
+            <p className="text-xs tracking-widest text-right" style={{ color: "hsl(148 20% 35%)", fontStyle: "italic" }}>{tx.philAuthor}</p>
           </div>
         </RevealDiv>
 
