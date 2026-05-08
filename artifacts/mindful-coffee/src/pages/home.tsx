@@ -454,7 +454,7 @@ export default function Home() {
             {tx.heroSubtitle}
           </p>
           <p
-            className="animate-fade-in-up mb-10 tracking-[0.15em] text-[14px] text-right bg-[#00000000] border-t-[#dae8be] border-r-[#dae8be] border-b-[#dae8be] border-l-[#dae8be] font-normal border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px] text-[#e9e3d8]"
+            className="animate-fade-in-up mb-10 tracking-[0.15em] text-[14px] text-right bg-[#00000000] font-normal border-t-[0px] border-r-[0px] border-b-[0px] border-l-[0px] text-[#f4f1eb] border-t-[#dae8be] border-r-[#dae8be] border-b-[#dae8be] border-l-[#dae8be]"
             style={{ color: "hsl(38 28% 78%)", animationDelay: "0.85s", opacity: 0, fontFamily: "var(--app-font-mono)" }}
           >
             {tx.heroDesc}
