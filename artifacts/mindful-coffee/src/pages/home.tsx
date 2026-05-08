@@ -440,7 +440,7 @@ export default function Home() {
             {tx.heroTagline}
           </h1>
           <p
-            className="animate-fade-in-up mb-2 text-[#5aa35a]"
+            className="animate-fade-in-up mb-2 text-[#5aa35a] text-center"
             style={{
               fontFamily: "var(--app-font-serif)",
               fontSize: "clamp(1.1rem, 3vw, 1.6rem)",
