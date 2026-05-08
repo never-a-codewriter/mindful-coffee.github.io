@@ -27,22 +27,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-          
 
       - name: Install dependencies
-        run: pnpm install 
+        run: pnpm install
 
       - name: Build
-        run: pnpm --filter @workspace/mindful-coffee run build
+        run: pnpm run build
         env:
-          BASE_PATH: /mindful-coffee.github.io/
-          PORT: 3000
           NODE_ENV: production
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: artifacts/mindful-coffee/dist/public
+          path: dist
 
   deploy:
     environment:
