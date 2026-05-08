@@ -9,6 +9,12 @@ import img7 from "@assets/2026_05_08_04_11_IMG_3367_1778259102326.JPG";
 import img8 from "@assets/2026_05_08_04_12_IMG_3368_1778259102326.JPG";
 import img9 from "@assets/2026_05_08_04_12_IMG_3369_1778259102326.JPG";
 import imgGif from "@assets/2026_05_08_04_12_IMG_3373_1778259102328.GIF";
+import imgMonk from "@assets/2026_05_06_00_09_IMG_3335_1778260450132.JPG";
+import imgSetup from "@assets/2026_05_08_04_09_IMG_3361_1778260450133.JPG";
+import imgPouringTop from "@assets/2026_05_08_04_15_IMG_3377_1778260450134.PNG";
+import imgMoodyPour from "@assets/2026_05_08_04_16_IMG_3380_1778260450135.JPG";
+import imgScene from "@assets/2026_05_08_04_19_IMG_3391_1778260450138.PNG";
+import imgBrewing from "@assets/2026_05_08_04_16_IMG_3381_1778260450135.JPG";
 
 type Lang = "zh" | "en" | "de";
 
@@ -89,6 +95,9 @@ const t: Record<Lang, Record<string, string>> = {
     footerCopy: "© 2025 正念咖啡 · Mindful Coffee München",
     footerMPI: "国际静心协会",
     footerWeb: "官网",
+    footerFollow: "关注我们",
+    footerIG: "Instagram",
+    footerXHS: "小红书",
     selectDefault: "请选择……",
   },
   en: {
@@ -167,6 +176,9 @@ const t: Record<Lang, Record<string, string>> = {
     footerCopy: "© 2025 Mindful Coffee München · 正念咖啡",
     footerMPI: "Mindful Peace International",
     footerWeb: "Website",
+    footerFollow: "Follow us",
+    footerIG: "Instagram",
+    footerXHS: "Xiaohongshu (RED)",
     selectDefault: "Please select…",
   },
   de: {
@@ -245,6 +257,9 @@ const t: Record<Lang, Record<string, string>> = {
     footerCopy: "© 2025 Mindful Coffee München · 正念咖啡",
     footerMPI: "Mindful Peace International",
     footerWeb: "Webseite",
+    footerFollow: "Folgt uns",
+    footerIG: "Instagram",
+    footerXHS: "Xiaohongshu (RED)",
     selectDefault: "Bitte auswählen…",
   },
 };
@@ -541,7 +556,7 @@ export default function Home() {
         {/* Image strip */}
         <RevealDiv delay={3}>
           <div className="grid grid-cols-3 gap-3 mt-10">
-            {[img4, img9, img8].map((src, i) => (
+            {[imgMoodyPour, img9, imgBrewing].map((src, i) => (
               <div key={i} className="overflow-hidden" style={{ aspectRatio: "1/1" }}>
                 <img
                   src={src}
@@ -623,6 +638,14 @@ export default function Home() {
               className="p-6 h-full"
               style={{ background: "hsl(38 22% 91%)", border: "1px solid hsl(38 15% 78% / 0.5)" }}
             >
+              <div className="overflow-hidden mb-5" style={{ aspectRatio: "3/2" }}>
+                <img
+                  src={imgMonk}
+                  alt="Venerable Master Jiqun illustration"
+                  className="w-full h-full object-cover"
+                  style={{ filter: "saturate(0.55) brightness(1.02)", objectPosition: "center 20%" }}
+                />
+              </div>
               <p className="text-xs tracking-[0.16em] uppercase mb-3" style={{ color: "hsl(148 20% 35%)" }}>
                 {tx.aboutMasterTitle}
               </p>
@@ -645,7 +668,7 @@ export default function Home() {
         {/* Photo gallery */}
         <RevealDiv delay={3}>
           <div className="gallery-grid">
-            {[img1, img5, img6, img3].map((src, i) => (
+            {[imgSetup, imgScene, img6, img3].map((src, i) => (
               <div key={i} className="overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <img
                   src={src}
@@ -728,7 +751,7 @@ export default function Home() {
           <RevealDiv delay={3}>
             <div className="mt-10 overflow-hidden" style={{ maxHeight: "340px" }}>
               <img
-                src={img5}
+                src={imgPouringTop}
                 alt=""
                 className="w-full object-cover"
                 style={{ filter: "saturate(0.7) brightness(0.92)", objectPosition: "center 40%", maxHeight: "340px" }}
@@ -763,8 +786,8 @@ export default function Home() {
 
         <div className="space-y-10">
           {[
-            { title: tx.art1Title, body: tx.art1Body, img: img8 },
-            { title: tx.art2Title, body: tx.art2Body, img: img1 },
+            { title: tx.art1Title, body: tx.art1Body, img: imgScene },
+            { title: tx.art2Title, body: tx.art2Body, img: imgMoodyPour },
             { title: tx.art3Title, body: tx.art3Body, img: img4 },
           ].map((article, i) => (
             <RevealDiv key={i} delay={((i % 3) + 1) as 1 | 2 | 3}>
@@ -949,43 +972,82 @@ export default function Home() {
         className="px-8 py-12"
         style={{ background: "hsl(148 20% 14%)", borderTop: "1px solid hsl(148 20% 20%)" }}
       >
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
-          <div>
-            <p
-              style={{
-                fontFamily: "var(--app-font-serif)",
-                fontSize: "1.2rem",
-                fontWeight: 300,
-                color: "hsl(38 28% 85%)",
-                marginBottom: "0.4rem",
-              }}
-            >
-              {tx.footerOrg}
-            </p>
-            <p className="text-xs tracking-wider" style={{ color: "hsl(38 28% 55%)" }}>
-              {tx.footerCopy}
-            </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-10">
+            <div>
+              <p
+                style={{
+                  fontFamily: "var(--app-font-serif)",
+                  fontSize: "1.2rem",
+                  fontWeight: 300,
+                  color: "hsl(38 28% 85%)",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                {tx.footerOrg}
+              </p>
+              <p className="text-xs tracking-wider" style={{ color: "hsl(38 28% 55%)" }}>
+                {tx.footerCopy}
+              </p>
+            </div>
+            <div className="flex flex-col gap-1 text-xs" style={{ color: "hsl(38 28% 55%)" }}>
+              <span className="tracking-[0.14em] uppercase mb-2" style={{ color: "hsl(38 28% 70%)" }}>
+                {tx.footerMPI}
+              </span>
+              <a
+                href="https://www.mindfulpeace.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+                style={{ color: "hsl(38 28% 60%)" }}
+              >
+                www.mindfulpeace.org
+              </a>
+              <a
+                href="mailto:mpi@mindfulpeace.org"
+                className="hover:opacity-80 transition-opacity"
+                style={{ color: "hsl(38 28% 60%)" }}
+              >
+                mpi@mindfulpeace.org
+              </a>
+            </div>
           </div>
-          <div className="flex flex-col gap-1 text-xs" style={{ color: "hsl(38 28% 55%)" }}>
-            <span className="tracking-[0.14em] uppercase mb-2" style={{ color: "hsl(38 28% 70%)" }}>
-              {tx.footerMPI}
-            </span>
-            <a
-              href="https://www.mindfulpeace.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-              style={{ color: "hsl(38 28% 60%)" }}
-            >
-              www.mindfulpeace.org
-            </a>
-            <a
-              href="mailto:mpi@mindfulpeace.org"
-              className="hover:opacity-80 transition-opacity"
-              style={{ color: "hsl(38 28% 60%)" }}
-            >
-              mpi@mindfulpeace.org
-            </a>
+
+          {/* Social media row */}
+          <div style={{ borderTop: "1px solid hsl(148 20% 22%)", paddingTop: "1.5rem" }}>
+            <p className="text-xs tracking-[0.18em] uppercase mb-4" style={{ color: "hsl(38 28% 55%)" }}>
+              {tx.footerFollow}
+            </p>
+            <div className="flex gap-6 flex-wrap">
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/mindfulcoffeemunich"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs transition-opacity hover:opacity-70"
+                style={{ color: "hsl(38 28% 65%)" }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                </svg>
+                {tx.footerIG}
+              </a>
+              {/* Xiaohongshu / RED */}
+              <a
+                href="https://www.xiaohongshu.com/user/profile/mindfulcoffee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs transition-opacity hover:opacity-70"
+                style={{ color: "hsl(38 28% 65%)" }}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                </svg>
+                {tx.footerXHS}
+              </a>
+            </div>
           </div>
         </div>
       </footer>
