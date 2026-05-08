@@ -465,7 +465,7 @@ export default function Home() {
           >
             <a
               href="#philosophy"
-              className="text-xs tracking-[0.16em] uppercase px-6 py-3 border transition-all duration-300"
+              className="text-xs tracking-[0.16em] uppercase px-6 py-3 border transition-all duration-300 border-t-[#ffffff] border-r-[#ffffff] border-b-[#ffffff] border-l-[#ffffff] border-t-[0.6668px] border-r-[0.6668px] border-b-[0.6668px] border-l-[0.6668px] rounded-tl-[2px] rounded-tr-[2px] rounded-br-[2px] rounded-bl-[2px]"
               style={{
                 borderColor: "hsl(38 28% 85% / 0.5)",
                 color: "hsl(38 28% 94%)",
