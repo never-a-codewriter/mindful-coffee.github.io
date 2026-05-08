@@ -417,7 +417,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-10 px-8 md:px-16 max-w-3xl bg-[#4a4a4a4d] text-[#000000]">
+        <div className="relative z-10 px-8 md:px-16 max-w-3xl bg-[#4a4a4a4d] text-[#e9e3d8]">
           <div
             className="animate-fade-in-up mb-3 text-xs tracking-[0.28em] uppercase text-right"
             style={{ color: "hsl(38 28% 85%)", animationDelay: "0.2s", opacity: 0 }}
