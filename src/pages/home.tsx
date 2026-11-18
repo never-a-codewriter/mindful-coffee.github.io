@@ -98,6 +98,7 @@ const t: Record<Lang, Record<string, string>> = {
     footerFollow: "关注我们",
     footerIG: "Instagram",
     footerXHS: "小红书",
+    footerCizhou: "慈舟学堂活动官网",
     selectDefault: "请选择……",
   },
   en: {
@@ -179,6 +180,7 @@ const t: Record<Lang, Record<string, string>> = {
     footerFollow: "Follow us",
     footerIG: "Instagram",
     footerXHS: "Xiaohongshu (RED)",
+    footerCizhou: "Cizhou Academy Events",
     selectDefault: "Please select…",
   },
   de: {
@@ -260,6 +262,7 @@ const t: Record<Lang, Record<string, string>> = {
     footerFollow: "Folgt uns",
     footerIG: "Instagram",
     footerXHS: "Xiaohongshu (RED)",
+    footerCizhou: "Veranstaltungen der Cizhou-Akademie",
     selectDefault: "Bitte auswählen…",
   },
 };
@@ -1038,6 +1041,16 @@ export default function Home() {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
                 </svg>
                 {tx.footerXHS}
+              </a>
+              {/* Cizhou Academy events */}
+              <a
+                href="https://www.mindfulpeacede.org/MUC-CZ/events"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs transition-opacity hover:opacity-70"
+                style={{ color: "hsl(38 28% 65%)" }}
+              >
+                {tx.footerCizhou}
               </a>
             </div>
           </div>
