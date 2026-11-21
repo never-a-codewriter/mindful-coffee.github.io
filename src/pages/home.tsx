@@ -967,17 +967,22 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-10">
             <div>
-              <p
+              <a
+                href="https://www.mindfulpeacede.org/MUC-CZ"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   fontFamily: "var(--app-font-serif)",
                   fontSize: "1.2rem",
                   fontWeight: 300,
                   color: "hsl(38 28% 85%)",
                   marginBottom: "0.4rem",
+                  display: "block",
                 }}
+                className="transition-opacity hover:opacity-80"
               >
                 {tx.footerOrg}
-              </p>
+              </a>
               <p className="text-xs tracking-wider" style={{ color: "hsl(38 28% 55%)" }}>
                 {tx.footerCopy}
               </p>
